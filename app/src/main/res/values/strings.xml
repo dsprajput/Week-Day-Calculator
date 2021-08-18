@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Weekday Calculator</string>
+    <string name="date_text">Enter Day:</string>
+    <string name="month_text">Enter Month:</string>
+    <string name="year_text">Enter Year:</string>
+    <string name="calculate_text">Calculate</string>
+    <string name="null_value">Enter Correct Values</string>
+    <string name="dd">dd</string>
+    <string name="mm">mm</string>
+    <string name="yyyy">yyyy</string>
+    <string name="developer">Developer: Digvijay Singh</string>
+</resources>

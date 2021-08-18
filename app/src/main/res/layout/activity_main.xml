@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/date_text"
+            style="@style/Widget.Weekday.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/date_text"
+            app:layout_constraintBottom_toBottomOf="@id/edit_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edit_date" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_date"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/dd"
+            app:layout_constraintStart_toEndOf="@id/date_text"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_date_field"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/month_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Weekday.TextView"
+            android:text="@string/month_text"
+            app:layout_constraintBottom_toBottomOf="@id/edit_month"
+            app:layout_constraintStart_toStartOf="@id/date_text"
+            app:layout_constraintTop_toTopOf="@id/edit_month" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_month"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/mm"
+            app:layout_constraintStart_toStartOf="@id/edit_date"
+            app:layout_constraintTop_toBottomOf="@id/edit_date">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_month_field"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/year_text"
+            style="@style/Widget.Weekday.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/year_text"
+            app:layout_constraintBottom_toBottomOf="@id/edit_year"
+            app:layout_constraintStart_toStartOf="@id/month_text"
+            app:layout_constraintTop_toTopOf="@id/edit_year" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edit_year"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/yyyy"
+            app:layout_constraintStart_toStartOf="@id/edit_month"
+            app:layout_constraintTop_toBottomOf="@id/edit_month">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_year_field"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/calculate_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/calculate_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/year_text"
+            app:layout_constraintTop_toBottomOf="@id/edit_year" />
+
+        <TextView
+            android:id="@+id/week_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Weekday.TextView"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calculate_button"
+            tools:text="Day: Monday" />
+
+        <TextView
+            android:id="@+id/developer_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Weekday.TextView"
+            android:text="@string/developer"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/week_result"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
